@@ -11,13 +11,23 @@ router.post('/test', (req, res) => {
         name,
         data,
         time: new Date().toISOString()
-    }
+    };
 
     //send event to sse clients
-    publishEvent(event)
+    publishEvent(event);
 
     res.status(200).json({ message: 'Event published', event });
 });
 
+router.post('/github', (req, res) => {
+
+    const event = {
+        ...req.body
+    };
+    
+    publishEvent(event)
+
+    res.status(200).json({ message: 'GitHub event received' }, event);
+});
 
 export default router;
