@@ -1,4 +1,4 @@
-# Webhook SSE Demo App
+# Webhook SSE Demo Web App
 
 Demonstrates - 
 - Express backend - demo webhook
