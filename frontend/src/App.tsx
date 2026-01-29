@@ -1,4 +1,4 @@
-import { EventPage } from "./pages"
+import { EventPage } from "./pages/index.js"
 
 const App =() => {
 

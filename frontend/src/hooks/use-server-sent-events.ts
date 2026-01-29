@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 
-export const useServerSentEvents = (url, onMessage) => {
+export const useServerSentEvents = (url : string, onMessage : any ) => {
 
-    const [events, setEvents] = useState([])
+    const [events, setEvents]: Array<any> = useState([])
 
     useEffect(() => {
         const eventSource = new EventSource(url)
 
         eventSource.onmessage = (event) => {
             const parsedData = JSON.parse(event.data)
-            setEvents((prevEvents) => [parsedData, ...prevEvents])
+            setEvents((prevEvents : any) => [parsedData, ...prevEvents])
             if (onMessage) {
                 onMessage(parsedData)
             }
