@@ -1,4 +1,4 @@
-import { SingleEventItem } from './SingleEventItem.jsx'
+import { SingleEventItem } from './SingleEventItem.js'
 
 export const EventList = ({ events }) => {
   return (
